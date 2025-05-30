@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXAM SCHEDULE</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- Optional: Include Bootstrap for styling -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('https://www.alagappauniversity.ac.in/img/core-img/alu-slide1.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+
+    </style>
+</head>
+<body >
+    <div class="container">
+        <h1 class="my-4 text-center" style="color: aliceblue; font-family: fantasy;">EXAM SCHEDULE</h1>
+
+        <!-- Optional Filter Form -->
+        <form method="GET" action="/" class="mb-4">
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="semester" class="form-label" style="color: aliceblue;">Filter by Semester:</label>
+                    <select name="semester" id="semester" class="form-select">
+                        <option value="">All Semesters</option>
+                        <option value="Sem 1">Sem 1</option>
+                        <option value="Sem 2">Sem 2</option>
+                        <option value="Sem 3">Sem 3</option>
+                        <option value="Sem 3">Sem 4</option>
+                        <option value="Sem 3">Sem 5</option>
+                        <option value="Sem 3">Sem 6</option>
+                        <!-- Add more semesters as needed -->
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label for="department" class="form-label" style="color: aliceblue;">Filter by Department:</label>
+                    <select name="department" id="department" class="form-select">
+                        <option value="">All Departments</option>
+                        <option value="CSE">CS</option>
+                        <option value="ECE">PHY</option>
+                        <option value="ME">CHEM</option>
+                        <option value="ME">TAM</option>
+                        <option value="ME">ENG</option>
+                        <option value="ME">MATH</option>
+                        <option value="ME">ECO</option>
+                        <option value="ME">ZOO</option>
+                        <!-- Add more departments as needed -->
+                    </select>
+                </div>
+                <div class="col-md-4 align-self-end">
+                    <button type="submit" class="btn btn-primary">Filter</button>
+                </div>
+            </div>
+        </form>
+
+        <!-- Exam Schedule Table -->
+        <table class="table table-bordered table-hover">
+            <thead class="table-dark">
+                <tr>
+                    <th>Subject</th>
+                    <th>Semester</th>
+                    <th>Department</th>
+                    <th>Date</th>
+                    <th>Start Time</th>
+                    <th>End Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                        <tr>
+                            <td>JAVA</td> <!-- subject -->
+                            <td>5</td> <!-- semester -->
+                            <td>CS</td> <!-- department -->
+                            <td>21.05.2025</td> <!-- exam_date -->
+                            <td>10.00 AM</td> <!-- start_time -->
+                            <td>01.00 PM</td> <!-- end_time -->
+                        </tr>
+                        <tr>
+                            <td>MOTION-THEORY</td> <!-- subject -->
+                            <td>5</td> <!-- semester -->
+                            <td>PHY</td> <!-- department -->
+                            <td>21.05.2025</td> <!-- exam_date -->
+                            <td>10.00 AM</td> <!-- start_time -->
+                            <td>01.00 PM</td> <!-- end_time -->
+                        </tr>
+                        <tr>
+                            <td>MICRO-BIOLOGY</td> <!-- subject -->
+                            <td>5</td> <!-- semester -->
+                            <td>CHEM</td> <!-- department -->
+                            <td>21.05.2025</td> <!-- exam_date -->
+                            <td>10.00 AM</td> <!-- start_time -->
+                            <td>01.00 PM</td> <!-- end_time -->
+                        </tr>
+                        <tr>
+                            <td>TAMIL</td> <!-- subject -->
+                            <td>5</td> <!-- semester -->
+                            <td>ALL</td> <!-- department -->
+                            <td>25.05.2025</td> <!-- exam_date -->
+                            <td>02.00 PM</td> <!-- start_time -->
+                            <td>05.00 PM</td> <!-- end_time -->
+                        </tr>
+                        <tr>
+                            <td>ENG</td> <!-- subject -->
+                            <td>5</td> <!-- semester -->
+                            <td>ALL</td> <!-- department -->
+                            <td>27.05.2025</td> <!-- exam_date -->
+                            <td>02.00 PM</td> <!-- start_time -->
+                            <td>05.00 PM</td> <!-- end_time -->
+                        </tr>
+                        <tr>
+                            <td>EVS</td> <!-- subject -->
+                            <td>5</td> <!-- semester -->
+                            <td>ALL</td> <!-- department -->
+                            <td>29.05.2025</td> <!-- exam_date -->
+                            <td>02.00 PM</td> <!-- start_time -->
+                            <td>05.00 PM</td> <!-- end_time -->
+                        </tr>
+                        <tr>
+                            <td>WILD LIFE</td> <!-- subject -->
+                            <td>5</td> <!-- semester -->
+                            <td>ZOO</td> <!-- department -->
+                            <td>26.05.2025</td> <!-- exam_date -->
+                            <td>10.00 AM</td> <!-- start_time -->
+                            <td>01.00 PM</td> <!-- end_time -->
+                        </tr>
+                        <tr>
+                            <td>PHP</td> <!-- subject -->
+                            <td>5</td> <!-- semester -->
+                            <td>CS</td> <!-- department -->
+                            <td>01.06.2025</td> <!-- exam_date -->
+                            <td>02.00 PM</td> <!-- start_time -->
+                            <td>05.00 PM</td> <!-- end_time -->
+                        </tr>
+                        <tr>
+                            <td>GENERAL KNOWLEDGE</td> <!-- subject -->
+                            <td>5</td> <!-- semester -->
+                            <td>ALL</td> <!-- department -->
+                            <td>02.06.2025</td> <!-- exam_date -->
+                            <td>02.00 PM</td> <!-- start_time -->
+                            <td>05.00 PM</td> <!-- end_time -->
+                        </tr>
+                    <tr>
+                        <td colspan="6" class="text-center">No exams scheduled.</td>
+                    </tr>
+            </tbody>
+        </table>
+
+        <!-- Optional: Link to Admin Pages -->
+        <div class="text-center">
+            <a href="/add" class="btn btn-success">Add New Exam (Admin)</a>
+            <a href="/admin" class="btn btn-warning">Manage Exams (Admin)</a>
+        </div>
+    </div>
+
+    <!-- Optional: Bootstrap JS for enhanced functionality -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
